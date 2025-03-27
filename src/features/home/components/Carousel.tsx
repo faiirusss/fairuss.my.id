@@ -1,15 +1,19 @@
 "use client";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
-const Carousel = ({ children: slides }) => {
+interface CarouselProps {
+  children: ReactNode[];
+}
+
+const Carousel: React.FC<CarouselProps> = ({ children }) => {
   const [curr, setCurr] = useState(0);
 
   const selectImage = (i: number) => {
-    setCurr(i)
+    setCurr(i);
   };
 
   const next = () =>
-    setCurr((curr) => (curr === slides.length - 1 ? 0 : curr + 1));
+    setCurr((curr) => (curr === children?.length - 1 ? 0 : curr + 1));
 
   return (
     <>
@@ -19,12 +23,12 @@ const Carousel = ({ children: slides }) => {
           style={{ transform: `translateX(-${curr * 100}%)` }}
           onClick={next}
         >
-          {slides}
+          {children}
         </div>
       </div>
       <div className="mt-2 px-2">
         <div className="flex items-center gap-2">
-          {slides.map((_, i) => (
+          {children.map((_, i) => (
             <button
               key={i}
               onClick={() => selectImage(i)}
