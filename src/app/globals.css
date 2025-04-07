@@ -75,7 +75,7 @@
     }
   }
 
-  h3 code {
+  /* h3 code {
     @apply !text-lg md:!text-xl;
   }
   
@@ -127,7 +127,6 @@
   counter-increment: line;
   content: counter(line);
  
-  /* Other styling */
   display: inline-block;
   width: 1rem;
   margin-right: 2rem;
@@ -141,4 +140,18 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
  
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
+} */
+
+@keyframes blob-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-blob {
+  animation: blob-rotate 20s infinite linear;
 }

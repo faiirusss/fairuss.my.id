@@ -17,7 +17,7 @@ const Carousel: React.FC<CarouselProps> = ({ children }) => {
 
   return (
     <>
-      <div className="overflow-hidden relative rounded-xl">
+      <div className="overflow-hidden relative rounded-xl shadow-2xl">
         <div
           className="flex transition-transform ease-out duration-300 cursor-pointer"
           style={{ transform: `translateX(-${curr * 100}%)` }}
