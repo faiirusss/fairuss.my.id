@@ -37,7 +37,7 @@ const Clock = () => {
       return <p className="text-sm">Jakarta Time</p>;
     }
   return (
-    <p className="text-sm" suppressHydrationWarning>
+    <p className="text-sm hidden md:block" suppressHydrationWarning>
       {time}
     </p>
   );

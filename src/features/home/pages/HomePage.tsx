@@ -20,36 +20,37 @@ const BLUR_FADE_DELAY = 0.04;
 
 const HomePage = () => {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
-      <div className="mx-auto w-full max-w-4xl pt-4">
+    <main className="flex flex-col min-h-[100dvh]">
+      <div className="pt-10">
         <DotPattern
           className={cn(
-            "[mask-image:radial-gradient(320px_circle_at_center,white,transparent)]"
+            "pt-24 hidden md:block [mask-image:radial-gradient(400px_circle_at_center,white,transparent)]"
           )}
         />
         <section id="hero">
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-7">
             <TextAnimate
               duration={0.5}
               animation="blurIn"
               as={"h1"}
               by="character"
               once
-              className="font-black text-5xl"
+              className="font-black text-3xl xs:text-4xl sm:text-5xl md:text-6xl"
             >
-              Frontend web developer
+              Software engineer
             </TextAnimate>
+            <div className="max-w-2xl">
             <TextAnimate
               delay={BLUR_FADE_DELAY * 6}
               duration={0.7}
               animation="blurIn"
-              by="character"
+              by="word"
               once
-              className="text-xl text-foreground/50"
+              className="text-left sm:text-xl md:text-2xl text-foreground/50 break-words hyphens-none"
             >
-              I&apos;m fairus, software engineer student from Bandung,
-              Indonesia.
+              I&apos;m fairus, software engineer student from bandung that&apos;s passionate about code with purpose and curiosity.
             </TextAnimate>
+            </div>
 
             <BlurFade delay={BLUR_FADE_DELAY * 16} inView>
               <Link href={"/about"}>
@@ -81,30 +82,30 @@ const HomePage = () => {
             </BlurFade>
           </div>
         </section>
-        <section id="projects" className="mt-20">
+        <section id="projects" className="mt-14 lg:mt-28 mx-6 lg:mx-9">
           <Carousel>
             {slides.map((item) => (
               <Image
                 key={item}
                 src={item}
                 alt={item}
-                width={800}
-                height={600}
+                width={1200}
+                height={900}
                 className="rounded-xl "
                 priority
               />
             ))}
           </Carousel>
-          <div className="grid grid-cols-5 gap-4 pt-8 mb-36">
+          <div className="md:grid grid-cols-5 gap-4 pt-8 mb-36 space-y-4">
             <div className="">
               <h1 className="font-black text-2xl">Berbanjar</h1>
             </div>
             <div className="col-span-4 col-start-3 gap-3 flex-col flex items-start">
-              <Avatar>
+            <Avatar className="w-9 h-9">
                 <AvatarImage src="profile2.webp" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <p className="text-base font-medium text-foreground/50 text-left">
+              <p className="text-sm sm:text-base font-medium text-foreground/50 text-left">
                 Develop an education platform for students in Indonesia using
                 Laravel framework and Tailwind CSS.
               </p>
@@ -129,30 +130,30 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        <section id="projects">
+        <section id="projects" className="mx-9">
           <Carousel>
             {slides2.map((item) => (
               <Image
                 key={item}
                 src={item}
                 alt={item}
-                width={800}
-                height={600}
+                width={1200}
+                height={900}
                 className="rounded-xl"
                 priority
               />
             ))}
           </Carousel>
-          <div className="grid grid-cols-5 gap-4 pt-8 mb-36">
+          <div className="md:grid grid-cols-5 gap-4 pt-8 mb-36 space-y-4">
             <div className="">
               <h1 className="font-black text-2xl">Merakit</h1>
             </div>
             <div className="col-span-4 col-start-3 gap-3 flex-col flex items-start">
-              <Avatar>
+              <Avatar className="w-9 h-9">
                 <AvatarImage src="profile2.webp" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
-              <p className="text-base font-medium text-foreground/50 text-left">
+              <p className="text-sm sm:text-base font-medium text-foreground/50 text-left">
                 Develop cashier system using Laravel framework and Tailwind CSS.
               </p>
               <div className="flex gap-6">

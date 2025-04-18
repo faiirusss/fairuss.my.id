@@ -7,7 +7,7 @@ export const DATA = {
   url: "https://fairuss.my.id/",
   location: "Bandung, Id",
   locationLink: "https://www.google.com/maps/place/bandung",
-  description: "Frontend Web Developer",
+  description: "Software Engineer",
   summary:
     "Undergraduate Software Engineer at Universitas Pendidikan Indonesia.",
   avatarUrl: "profile2.webp",

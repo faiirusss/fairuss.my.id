@@ -11,9 +11,9 @@ const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-10 md:pt-0 pt-10">
       <section id="hero">
-        <div className="mx-auto w-full max-w-4xl space-y-8">
+        <div className="mx-auto w-full max-w-3xl space-y-8">
           <div className="gap-2 flex justify-between">
             <div className="flex-col flex flex-1 space-y-1.5">
               <BlurFadeText
@@ -38,6 +38,7 @@ export default function Page() {
         </div>
       </section> 
       <section id="about">
+      <div className="mx-auto w-full max-w-3xl">
         <BlurFade delay={BLUR_FADE_DELAY * 3}>
           <h2 className="text-xl font-bold">About</h2>
         </BlurFade>
@@ -46,8 +47,10 @@ export default function Page() {
             {DATA.summary}
           </Markdown>
         </BlurFade>
+        </div>
       </section>
       <section id="work">
+      <div className="mx-auto w-full max-w-3xl">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Experience</h2>
@@ -71,8 +74,10 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
+        </div>
       </section>
       <section id="skills">
+      <div className="mx-auto w-full max-w-3xl">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 9}>
             <h2 className="text-xl font-bold">Skills</h2>
@@ -88,6 +93,7 @@ export default function Page() {
             <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
           </BlurFade>
         </div>
+      </div>
       </section>
     </main>
   );
