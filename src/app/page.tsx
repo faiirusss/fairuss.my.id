@@ -51,35 +51,6 @@ export default function Page() {
           </BlurFade>
         </div>
       </section>
-      <section id="projects">
-        <div className="mx-auto w-full max-w-3xl">
-          <div className="flex min-h-0 flex-col gap-y-3">
-            <BlurFade delay={BLUR_FADE_DELAY * 5}>
-              <h2 className="text-xl font-bold">My Projects</h2>
-            </BlurFade>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-[800px] mx-auto">
-              {LIST_PROJECTS.map((project, id) => (
-                <BlurFade
-                  key={project.title}
-                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-                >
-                  <ProjectCard
-                    key={project.title}
-                    title={project.title}
-                    href={project.href}
-                    description={project.description}
-                    dates={project.dates}
-                    tags={project.technologies}
-                    image={project.image}
-                    links={project.links}
-                    // description={work.description}
-                  />
-                </BlurFade>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
       <section id="work">
         <div className="mx-auto w-full max-w-3xl">
           <div className="flex min-h-0 flex-col gap-y-3">
@@ -123,6 +94,34 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 10}>
               <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
             </BlurFade>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 15}>
+              <h2 className="text-xl font-bold">My Projects</h2>
+            </BlurFade>
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-[800px] mx-auto">
+              {LIST_PROJECTS.map((project, id) => (
+                <BlurFade
+                  key={project.title}
+                  delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+                >
+                  <ProjectCard
+                    key={project.title}
+                    title={project.title}
+                    href={project.href}
+                    description={project.description}
+                    dates={project.dates}
+                    tags={project.technologies}
+                    image={project.image}
+                    links={project.links}
+                  />
+                </BlurFade>
+              ))}
+            </div>
           </div>
         </div>
       </section>

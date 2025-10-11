@@ -10,7 +10,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/bandung",
   description: "Software Engineer",
   summary:
-    "Freshgraduate Software Engineer at Universitas Pendidikan Indonesia.",
+    "Freshgraduate Software Engineer at Universitas Pendidikan Indonesia. passionate in building scalable & high performance web applications.",
   avatarUrl: "profile2.webp",
   navbar: {
     page: {
