@@ -36,64 +36,64 @@ export default function Page() {
             </BlurFade>
           </div>
         </div>
-      </section> 
+      </section>
       <section id="about">
-      <div className="mx-auto w-full max-w-3xl">
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
-          <h2 className="text-xl font-bold">About</h2>
-        </BlurFade>
-        <BlurFade delay={BLUR_FADE_DELAY * 4}>
-          <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-            {DATA.summary}
-          </Markdown>
-        </BlurFade>
+        <div className="mx-auto w-full max-w-3xl">
+          <BlurFade delay={BLUR_FADE_DELAY * 3}>
+            <h2 className="text-xl font-bold">About</h2>
+          </BlurFade>
+          <BlurFade delay={BLUR_FADE_DELAY * 4}>
+            <Markdown className="prose max-w-full text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
+              {DATA.summary}
+            </Markdown>
+          </BlurFade>
         </div>
       </section>
       <section id="work">
-      <div className="mx-auto w-full max-w-3xl">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 5}>
-            <h2 className="text-xl font-bold">Experience</h2>
-          </BlurFade>
-          {DATA.work.map((work, id) => (
-            <BlurFade
-              key={work.company}
-              delay={BLUR_FADE_DELAY * 6 + id * 0.05}
-            >
-              <ResumeCard
-                key={work.company}
-                logoUrl={work.logoUrl}
-                altText={work.company}
-                title={work.company}
-                subtitle={work.title}
-                href={work.href}
-                badges={work.badges}
-                period={`${work.start} - ${work.end ?? "Present"}`}
-                // description={work.description}              
-              />
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 5}>
+              <h2 className="text-xl font-bold">Experience</h2>
             </BlurFade>
-          ))}
-        </div>
+            {DATA.work.map((work, id) => (
+              <BlurFade
+                key={work.company}
+                delay={BLUR_FADE_DELAY * 6 + id * 0.05}
+              >
+                <ResumeCard
+                  key={work.company}
+                  logoUrl={work.logoUrl}
+                  altText={work.company}
+                  title={work.company}
+                  subtitle={work.title}
+                  href={work.href}
+                  badges={work.badges}
+                  period={`${work.start} - ${work.end ?? "Present"}`}
+                  // description={work.description}
+                />
+              </BlurFade>
+            ))}
+          </div>
         </div>
       </section>
       <section id="skills">
-      <div className="mx-auto w-full max-w-3xl">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <InfiniteMovingCards
-              items={LIST_SKILLS}
-              direction="right"
-              speed="fast"
-            />
-          </BlurFade>
-          <BlurFade delay={BLUR_FADE_DELAY * 10}>
-            <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
-          </BlurFade>
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 9}>
+              <h2 className="text-xl font-bold">Skills</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 10}>
+              <InfiniteMovingCards
+                items={LIST_SKILLS}
+                direction="right"
+                speed="fast"
+              />
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 10}>
+              <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
+            </BlurFade>
+          </div>
         </div>
-      </div>
       </section>
     </main>
   );

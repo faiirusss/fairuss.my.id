@@ -1,4 +1,5 @@
 import { Icons } from "@/components/icons";
+import { LIST_PROJECTS } from "@/constants/listProject";
 import { Code, HomeIcon, Mail, UserRound } from "lucide-react";
 
 export const DATA = {
@@ -9,7 +10,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/bandung",
   description: "Software Engineer",
   summary:
-    "Undergraduate Software Engineer at Universitas Pendidikan Indonesia.",
+    "Freshgraduate Software Engineer at Universitas Pendidikan Indonesia.",
   avatarUrl: "profile2.webp",
   navbar: {
     page: {
@@ -19,13 +20,6 @@ export const DATA = {
         icon: HomeIcon,
 
         home: true,
-      },
-      About: {
-        label: "About",
-        href: "/about",
-        icon: UserRound,
-
-        home: false,
       },
       Project: {
         label: "Projects",
@@ -81,36 +75,25 @@ export const DATA = {
 
   work: [
     {
-      company: "Berbanjar",
-      href: "berbanjar.com",
-      badges: [],
-      location: "Remote",
-      title: "Fullstack web developer",
-      logoUrl: "",
-      start: "Sep 2024",
-      end: "Dec 2024",
-      description: "-.",
-    },
-    {
       company: "PT. Bridgestone Tire Indonesia",
       badges: [],
       href: "-",
       location: "Karawang",
-      title: "Web Developer Intern",
+      title: "Fullstack Web Developer Intern",
       logoUrl: "bridgestone.jpg",
       start: "Sep 2024",
       end: "Dec 2024",
       description: "-.",
     },
     {
-      company: "Merajut Asa Kita",
-      href: "merajutasakita.com",
+      company: "Berbanjar",
+      href: "berbanjar.com",
       badges: [],
-      location: "Bandung",
-      title: "Fullstack web developer",
-      logoUrl: "merakit.jpg",
-      start: "May 2024",
-      end: "Aug 2024",
+      location: "Remote",
+      title: "Frontend Web Developer",
+      logoUrl: "",
+      start: "Jul 2024",
+      end: "Sep 2024",
       description: "-.",
     },
     {
@@ -126,15 +109,25 @@ export const DATA = {
     },
     {
       company: "Kampoeng Radjoet",
-      href: "https://li.me/",
+      href: "merajutasakita.com",
       badges: [],
       location: "Bandung",
-      title: "Web Developer",
+      title: "Fullstack Web developer",
       logoUrl: "kampoengradjoet.jpg",
       start: "Oct 2023",
-      end: "Jan 2024",
+      end: "Jun 2024",
       description: "-.",
     },
+    // {
+    //   company: "Kampoeng Radjoet",
+    //   href: "https://li.me/",
+    //   badges: [],
+    //   location: "Bandung",
+    //   title: "Web Developer",
+    //   logoUrl: "kampoengradjoet.jpg",
+    //   start: "Oct 2023",
+    //   end: "Jan 2024",
+    //   description: "-.",
+    // },
   ],
-  
 } as const;
