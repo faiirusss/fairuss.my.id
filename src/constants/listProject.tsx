@@ -43,7 +43,7 @@ export const LIST_PROJECTS = [
     active: true,
     description:
       "A web-based cashier application developed to simplify and digitalize transaction processes for small and medium businesses.",
-    technologies: ["Laravel", "TailwindCSS", "Livewire", "Mysql"],
+    technologies: ["Laravel", "TailwindCSS", "Livewire", "Mysql", "Filament"],
     links: [
       {
         type: "Website",

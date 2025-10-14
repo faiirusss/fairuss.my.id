@@ -1,6 +1,5 @@
 import { Icons } from "@/components/icons";
-import { LIST_PROJECTS } from "@/constants/listProject";
-import { Code, HomeIcon, Mail, UserRound } from "lucide-react";
+import { Code, HomeIcon, Mail } from "lucide-react";
 
 export const DATA = {
   name: "Fairus",
