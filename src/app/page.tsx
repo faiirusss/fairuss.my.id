@@ -103,7 +103,7 @@ export default function Page() {
             <BlurFade delay={BLUR_FADE_DELAY * 15}>
               <h2 className="text-xl font-bold">My Projects</h2>
             </BlurFade>
-            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 max-w-[800px] mx-auto">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 max-w-[800px] mx-auto">
               {LIST_PROJECTS.map((project, id) => (
                 <BlurFade
                   key={project.title}

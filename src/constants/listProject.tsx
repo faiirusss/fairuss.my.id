@@ -7,7 +7,7 @@ export const LIST_PROJECTS = [
     dates: "2024",
     active: true,
     description:
-      "an educational platform that provides open digital learning materials that can be accessedby anyone.",
+      "An educational platform that provides open digital learning materials that can be accessed by anyone.",
     technologies: ["Laravel", "PHP", "Mysql", "TailwindCSS"],
     links: [
       {
@@ -24,7 +24,7 @@ export const LIST_PROJECTS = [
     href: "https://github.com/faiirusss/BE-DMS",
     dates: "2024",
     active: true,
-    description: "Document management system for internal use.",
+    description: "Internal document management system for fast, structured, and secure file handling.",
     technologies: ["Laravel", "TailwindCSS", "Livewire", "Mysql"],
     links: [
       {
@@ -34,6 +34,24 @@ export const LIST_PROJECTS = [
       },
     ],
     image: "/bridgestone.webp",
+    video: "",
+  },
+  {
+    title: "Inventory Management",
+    href: "https://github.com/faiirusss/kampoeng-radjoet",
+    dates: "2023",
+    active: true,
+    description:
+      "A web-based system for tracking, organizing, and managing stock efficiently in real time.",
+    technologies: ["PHP", "JQuery", "Bootstrap", "Mysql"],
+    links: [
+      {
+        type: "Source",
+        href: "https://github.com/faiirusss/kampoeng-radjoet",
+        icon: <Icons.github className="size-3" />,
+      },
+    ],
+    image: "/inventory2.webp",
     video: "",
   },
   {
@@ -55,21 +73,21 @@ export const LIST_PROJECTS = [
     video: "",
   },
   {
-    title: "Inventory Management",
-    href: "https://github.com/faiirusss/kampoeng-radjoet",
+    title: "Project Management",
+    href: "https://github.com/faiirusss/project-management",
     dates: "2024",
     active: true,
     description:
-      "A web-based system for tracking, organizing, and managing stock efficiently in real time.",
-    technologies: ["PHP", "JQuery", "Bootstrap", "Mysql"],
+      "Web-based platform to organize, monitor, and track project progress efficiently.",
+    technologies: ["PHP", "Laravel", "Bootstrap", "Mysql", "Linux"],
     links: [
       {
         type: "Source",
-        href: "https://github.com/faiirusss/kampoeng-radjoet",
+        href: "https://github.com/faiirusss/project-management",
         icon: <Icons.github className="size-3" />,
       },
     ],
-    image: "/inventory2.webp",
+    image: "/pmo.webp",
     video: "",
   },
 ];
