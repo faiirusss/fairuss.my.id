@@ -1,3 +1,4 @@
+import { CursorGlow } from "@/components/cursor-glow";
 import Navbar from "@/components/navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -6,7 +7,6 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
-import { DotPattern } from "@/components/magicui/dot-pattern";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -65,7 +65,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             {children}
-            <div className="bg-[#15d98bfd] h-[400px] w-[400px] absolute rounded-full blur-[150px] -z-50 filter -top-[100px] -left-20 opacity-50"></div>
+            <CursorGlow />
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
