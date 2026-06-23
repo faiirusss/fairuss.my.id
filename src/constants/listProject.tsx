@@ -1,7 +1,44 @@
 import { Icons } from "@/components/icons";
 
-export const LIST_PROJECTS = [
+export interface ProjectLink {
+  type: string;
+  href: string;
+  icon: React.ReactNode;
+}
+
+export interface GalleryImage {
+  src: string;
+  alt: string;
+  caption?: string;
+}
+
+export interface CaseStudy {
+  overview?: string;
+  problem?: string;
+  approach?: string;
+  challenges?: string;
+  outcome?: string;
+  gallery?: GalleryImage[];
+}
+
+export interface Project {
+  slug: string;
+  title: string;
+  href: string;
+  dates: string;
+  active: boolean;
+  description: string;
+  technologies: string[];
+  links: ProjectLink[];
+  image: string;
+  video?: string;
+  coverImage?: string;
+  caseStudy?: CaseStudy;
+}
+
+export const LIST_PROJECTS: Project[] = [
   {
+    slug: "berbanjar",
     title: "Berbanjar",
     href: "https://Berbanjar.com",
     dates: "2024",
@@ -17,14 +54,15 @@ export const LIST_PROJECTS = [
       },
     ],
     image: "/berbanjar.webp",
-    // [, "/berbanjar2.webp", "/berbanjar3.webp"],
   },
   {
+    slug: "dms",
     title: "DMS",
     href: "https://github.com/faiirusss/BE-DMS",
     dates: "2024",
     active: true,
-    description: "Internal document management system for fast, structured, and secure file handling.",
+    description:
+      "Internal document management system for fast, structured, and secure file handling.",
     technologies: ["Laravel", "TailwindCSS", "Livewire", "Mysql"],
     links: [
       {
@@ -37,6 +75,7 @@ export const LIST_PROJECTS = [
     video: "",
   },
   {
+    slug: "inventory-management",
     title: "Inventory Management",
     href: "https://github.com/faiirusss/kampoeng-radjoet",
     dates: "2023",
@@ -55,6 +94,7 @@ export const LIST_PROJECTS = [
     video: "",
   },
   {
+    slug: "merakit",
     title: "Merakit",
     href: "https://merajutasakita.com",
     dates: "2024",
@@ -73,6 +113,7 @@ export const LIST_PROJECTS = [
     video: "",
   },
   {
+    slug: "project-management",
     title: "Project Management",
     href: "https://github.com/faiirusss/project-management",
     dates: "2024",

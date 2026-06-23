@@ -111,6 +111,7 @@ export default function Page() {
                 >
                   <ProjectCard
                     key={project.title}
+                    slug={project.slug}
                     title={project.title}
                     href={project.href}
                     description={project.description}
