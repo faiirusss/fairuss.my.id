@@ -72,7 +72,19 @@ export const DATA = {
     },
   },
 
-  work: [
+  work: 
+  [
+    {
+      company: "Ilmukomputercom Braindevs Sistema",
+      badges: [],
+      href: "-",
+      location: "Jakarta",
+      title: "Software Engineer Intern",
+      logoUrl: "braindevsid_logo.jpg",
+      start: "Des 2025",
+      end: "Jun 2026",
+      description: "-."
+    },
     {
       company: "PT. Bridgestone Tire Indonesia",
       badges: [],
