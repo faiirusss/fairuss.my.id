@@ -1,5 +1,6 @@
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { GithubContributions } from "@/components/github-calendar";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -12,8 +13,11 @@ import Markdown from "react-markdown";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+  // Derived from resume data; the ?? default only satisfies pop()'s string|undefined type.
+  const ghUsername =
+    DATA.contact.social.GitHub.url.split("/").filter(Boolean).pop() ?? "faiirusss";
   return (
-    <main className="flex flex-col min-h-[100dvh] space-y-10 md:pt-0 pt-10">
+    <main className="flex flex-col min-h-[100dvh] space-y-20 md:pt-0 pt-10">
       <section id="hero">
         <div className="mx-auto w-full max-w-3xl space-y-8">
           <div className="gap-2 flex justify-between">
@@ -39,7 +43,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" className="!mt-10">
         <div className="mx-auto w-full max-w-3xl">
           <BlurFade delay={BLUR_FADE_DELAY * 3}>
             <h2 className="text-xl font-bold">About</h2>
@@ -93,6 +97,20 @@ export default function Page() {
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 10}>
               <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
+            </BlurFade>
+          </div>
+        </div>
+      </section>
+      <section id="github">
+        <div className="mx-auto w-full max-w-3xl">
+          <div className="flex min-h-0 flex-col gap-y-3">
+            <BlurFade delay={BLUR_FADE_DELAY * 11}>
+              <h2 className="text-xl font-bold">GitHub Activity</h2>
+            </BlurFade>
+            <BlurFade delay={BLUR_FADE_DELAY * 12}>
+              <div className="w-full rounded-xl border bg-muted p-4 sm:p-6">
+                <GithubContributions username={ghUsername} />
+              </div>
             </BlurFade>
           </div>
         </div>

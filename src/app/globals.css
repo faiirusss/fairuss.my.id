@@ -155,3 +155,15 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .animate-blob {
   animation: blob-rotate 20s infinite linear;
 }
+
+/* GitHub contribution calendar: fill the full container width without a
+   horizontal scrollbar. The grid SVG has a viewBox, so width:100% scales it
+   proportionally to fit; the internal scroll container is then never needed. */
+.react-activity-calendar__calendar {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.react-activity-calendar__scroll-container {
+  overflow-x: hidden !important;
+}
