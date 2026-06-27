@@ -167,3 +167,9 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .react-activity-calendar__scroll-container {
   overflow-x: hidden !important;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
