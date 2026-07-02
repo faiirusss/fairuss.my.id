@@ -194,4 +194,224 @@ export const LIST_SKILLS = [
       </svg>
     ),
   },
+  {
+    name: "MySQL",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+        alt="MySQL"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Next.js",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
+        alt="Next.js"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Livewire",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/livewire/livewire-original.svg"
+        alt="Livewire"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Linux",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"
+        alt="Linux"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Git",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+        alt="Git"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Docker",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+        alt="Docker"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Bootstrap",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+        alt="Bootstrap"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "jQuery",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-original.svg"
+        alt="jQuery"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "PostgreSQL",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+        alt="PostgreSQL"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Hermes Agents",
+    icons: (
+      <img
+        src="/hermes-logo.png"
+        alt="Hermes Agents"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Vue",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+        alt="Vue"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Figma",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+        alt="Figma"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Postman",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+        alt="Postman"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Redis",
+    icons: (
+      <img
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redis/redis-plain.svg"
+        alt="Redis"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Drizzle",
+    icons: (
+      <img
+        src="https://cdn.simpleicons.org/drizzle"
+        alt="Drizzle"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "Claude",
+    icons: (
+      <img
+        src="https://cdn.simpleicons.org/claude"
+        alt="Claude"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "GitHub",
+    icons: (
+      <img
+        src="https://cdn.simpleicons.org/github"
+        alt="GitHub"
+        loading="lazy"
+        className="size-4 invert dark:invert-0"
+      />
+    ),
+  },
+  {
+    name: "Cursor",
+    icons: (
+      <img
+        src="https://cdn.simpleicons.org/cursor"
+        alt="Cursor"
+        loading="lazy"
+        className="size-4 invert dark:invert-0"
+      />
+    ),
+  },
+  {
+    name: "Codex",
+    icons: (
+      <img
+        src="/codex-logo.png"
+        alt="Codex"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
+  {
+    name: "OpenClaw",
+    icons: (
+      <img
+        src="/openclaw-logo.png"
+        alt="OpenClaw"
+        loading="lazy"
+        className="size-4"
+      />
+    ),
+  },
 ];

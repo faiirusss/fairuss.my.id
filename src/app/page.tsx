@@ -3,6 +3,7 @@ import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { GithubContributions } from "@/components/github-calendar";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { SkillFan } from "@/components/skill-fan";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 import { LIST_PROJECTS } from "@/constants/listProject";
@@ -16,6 +17,43 @@ export default function Page() {
   // Derived from resume data; the ?? default only satisfies pop()'s string|undefined type.
   const ghUsername =
     DATA.contact.social.GitHub.url.split("/").filter(Boolean).pop() ?? "faiirusss";
+  // Fanned card cluster — order + tilt/z mirror the "Tools I use" stack on rasmadibnu.com.
+  const FEATURED_SKILLS = [
+    { name: "Laravel", rotate: -18, z: 5 },
+    { name: "Hermes Agents", rotate: -6, z: 6, scale: 1.4 },
+    { name: "React", rotate: -6, z: 7 },
+    { name: "PostgreSQL", rotate: -2, z: 8 },
+    { name: "Docker", rotate: 4, z: 8 },
+    { name: "Next.js", rotate: 5, z: 7 },
+    { name: "MySQL", rotate: 12, z: 6 },
+  ];
+  const featuredSkills = FEATURED_SKILLS.flatMap(({ name, rotate, z, scale }) => {
+    const skill = LIST_SKILLS.find((s) => s.name === name);
+    return skill ? [{ ...skill, rotate, z, scale }] : [];
+  });
+  // Two marquee rows with distinct skill sets: languages/frontend on top, backend/tooling below.
+  const TOP_ROW = [
+    "React",
+    "TypeScript",
+    "Javascript",
+    "PHP",
+    "Tailwind",
+    "Bootstrap",
+    "jQuery",
+    "Next.js",
+    "Vue",
+    "Figma",
+    "Cursor",
+    "Claude",
+    "Codex",
+  ];
+  const skillsTop = TOP_ROW.flatMap((n) => {
+    const s = LIST_SKILLS.find((x) => x.name === n);
+    return s ? [s] : [];
+  });
+  const skillsBottom = LIST_SKILLS.filter(
+    (s) => !TOP_ROW.includes(s.name) && s.name !== "Hermes Agents"
+  );
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-20 md:pt-0 pt-10">
       <section id="hero">
@@ -84,19 +122,29 @@ export default function Page() {
       </section>
       <section id="skills">
         <div className="mx-auto w-full max-w-3xl">
-          <div className="flex min-h-0 flex-col gap-y-3">
+          <div className="flex min-h-0 flex-col gap-y-16">
             <BlurFade delay={BLUR_FADE_DELAY * 9}>
-              <h2 className="text-xl font-bold">Skills</h2>
+              <h2 className="text-xl font-bold">Technology Stack</h2>
+              <p className="mt-1 text-sm text-muted-foreground">
+                My everyday stack for building, connecting, and shipping production systems.
+              </p>
             </BlurFade>
             <BlurFade delay={BLUR_FADE_DELAY * 10}>
-              <InfiniteMovingCards
-                items={LIST_SKILLS}
-                direction="right"
-                speed="fast"
-              />
+              <SkillFan items={featuredSkills} />
             </BlurFade>
-            <BlurFade delay={BLUR_FADE_DELAY * 10}>
-              <InfiniteMovingCards items={LIST_SKILLS} speed="fast" />
+            <BlurFade delay={BLUR_FADE_DELAY * 11}>
+              <div className="mt-10 flex flex-col gap-4">
+                <InfiniteMovingCards
+                  items={skillsTop}
+                  direction="left"
+                  speed="normal"
+                />
+                <InfiniteMovingCards
+                  items={skillsBottom}
+                  direction="right"
+                  speed="normal"
+                />
+              </div>
             </BlurFade>
           </div>
         </div>
